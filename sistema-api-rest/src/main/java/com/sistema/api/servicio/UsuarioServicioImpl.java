@@ -24,8 +24,7 @@ public class UsuarioServicioImpl implements UsuariosServicio{
 	@Autowired
 	private ModelMapper modelMapper;
 	
-	@Autowired
-	private TelefoniaRepository telefonoRepositorio;
+
 	
 	@Autowired
 	private UsuarioRepositorio usuariosRepositorio;
@@ -231,15 +230,8 @@ public class UsuarioServicioImpl implements UsuariosServicio{
 
 	@Override
 	public List<Usuarios> devolverTodosUsuarios() {
-		ArrayList<Usuarios> informacionUsuarios = new ArrayList<>();
-    	ArrayList<Telefono> informacionTelefonos = new ArrayList<>();
-    	String ObjetoJson ="";
-    	informacionTelefonos.addAll(telefonoRepositorio.findAll());
-    	informacionUsuarios.addAll(usuariosRepositorio.ListarUsuarios());
-    	
 
-    	
-	    return usuariosRepositorio.ListarUsuarios();
+	    return usuariosRepositorio.findAll();
 	}
 
 	@Override

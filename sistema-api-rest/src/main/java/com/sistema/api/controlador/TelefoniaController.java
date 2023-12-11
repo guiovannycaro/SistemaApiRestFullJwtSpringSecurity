@@ -20,7 +20,7 @@ import com.sistema.api.Models.Telefono;
 
 
 @RestController
-@RequestMapping("/nisum/getion/telefonia")
+@RequestMapping("/api/getion/telefonia")
 @Api(value = "Administracion de Telefonia")
 public class TelefoniaController {
 	
@@ -37,7 +37,8 @@ public class TelefoniaController {
 		@ApiResponse(code = 404, message = "No existen Datos Asociados a Ese telefono", response = Telefono.class), })
 	
 	@ApiImplicitParams({
-		@ApiImplicitParam(name = "Telefonos", required = true, paramType = "query", dataType = "Object", value = "Ojeto Telefono", defaultValue = "{\r\n"
+		@ApiImplicitParam(name = "Telefonos", required = true, paramType = "query", dataType = "Object", value = "Ojeto Telefono", defaultValue = 
+				"{\r\n"
 				+ "\"id_telefono\":xxx,\r\n"
 				+ "\"number\": \"xxx\",\r\n"
 				+ "\"codigociudad\": \"xxx\",\r\n"

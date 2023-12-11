@@ -34,7 +34,7 @@ public class TelefonosServicioImpl implements TelefonosServicio{
 	            mensaje = "{\"mensaje\":\"El registro fue ingresado De Manera Correcta\"}";
 	        } catch (Exception er) {
 	        	mensaje = "{\"mensaje\":\"El registro no fue ingresado De Manera Correcta\"}";
-	            System.err.println("Se ha generado un erroral crear el usuario :  " + er.getMessage());
+	            System.err.println("Se ha generado un erroral crear el telefono :  " + er.getMessage());
 
 	        }
 	        return mensaje;

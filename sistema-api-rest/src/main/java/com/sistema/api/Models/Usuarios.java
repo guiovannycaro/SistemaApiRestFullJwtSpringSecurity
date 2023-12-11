@@ -29,7 +29,7 @@ public class Usuarios {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@ApiModelProperty(value = "id", required = true, dataType = "int", example = "000", position = 1)
+	@ApiModelProperty(value = "id", required = true, dataType = "long", example = "000", position = 1)
 	private long id;
 
 	 @Column(name = "nombre")

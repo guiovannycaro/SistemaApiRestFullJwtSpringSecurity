@@ -27,7 +27,7 @@ import com.sistema.api.Models.TelefonosXusuario;
 import com.sistema.api.servicio.TelefonosServicioImpl;
 import  com.sistema.api.servicio.UsuarioServicioImpl;
 @RestController
-@RequestMapping("/nisum/getion/clientes")
+@RequestMapping("/api/getion/clientes")
 @Api(value = "Administracion de clientes")
 public class UsuarioController {
 
@@ -167,19 +167,8 @@ public class UsuarioController {
 	
 		public List<Usuarios> devolverTodosUsuarios() {
 			// TODO Auto-generated method stub
-	    	ArrayList<Usuarios> informacionUsuarios = new ArrayList<>();
-	    	ArrayList<Telefono> informacionTelefonos = new ArrayList<>();
-	    	
-	    	
-	    	 TelefonosServicioImpl telefonoServicio = new TelefonosServicioImpl();
+	    
 	    	 UsuarioServicioImpl  usuarioServicio = new UsuarioServicioImpl();
-	    	 
-	    	informacionTelefonos.addAll(telefonoServicio.devolverTodosTelefonos());
-	    	informacionUsuarios.addAll(usuarioServicio.devolverTodosUsuarios());
-	    	
-	    	
-	    	 
-	    	 
 		    return usuarioServicio.devolverTodosUsuarios();
 		}
 	 

@@ -27,7 +27,7 @@ public class Users {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@ApiModelProperty(value = "id", required = true, dataType = "int", example = "000", position = 1)
+	@ApiModelProperty(value = "id", required = true, dataType = "Long", example = "000", position = 1)
 	 @Column(name = "idusuario")
 	private Long id_usuario;
 
@@ -63,7 +63,7 @@ public class Users {
 	    
 	   
 	 @Column(name = "estado")
-	 @ApiModelProperty(value = "estado", required = true, dataType = "String", example = "000", position = 9)
+	 @ApiModelProperty(value = "estado", required = true, dataType = "Boolean", example = "000", position = 9)
 	 private Boolean estado;
 
 	  

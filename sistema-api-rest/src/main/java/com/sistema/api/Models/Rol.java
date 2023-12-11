@@ -23,6 +23,7 @@ public class Rol  implements Serializable{
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@ApiModelProperty(value = "id", required = true, dataType = "long", example = "000", position = 1)
 	private long id;
 
 	@Column(length = 60)
@@ -38,6 +39,7 @@ public class Rol  implements Serializable{
 	private Boolean estado;
 
 	public long getId() {
+		
 		return id;
 	}
 

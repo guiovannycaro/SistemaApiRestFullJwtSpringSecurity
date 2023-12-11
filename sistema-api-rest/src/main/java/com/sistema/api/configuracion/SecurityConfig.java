@@ -42,21 +42,28 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
 	@Override
 	protected void configure(HttpSecurity http) throws Exception {
-		http.csrf().disable()
-		    .exceptionHandling()
-		    .authenticationEntryPoint(jwtAuthenticationEntryPoint)
-		    .and()
-		    .sessionManagement()
-		    .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
-		    .and()
-		    .authorizeRequests().antMatchers(HttpMethod.GET, "/api/**").permitAll()
-		    .antMatchers("/nisum/getion/telefonia/**","/nisum/getion/usuarios/**","/api/auth/**","/v2/api-docs",  "/configuration/**", "/swagger*/**", "/webjars/**").permitAll()
+		extraConfig(http)
+		    .authorizeRequests().antMatchers( HttpMethod.GET,"/api/**").permitAll()
+		    .antMatchers(HttpMethod.POST, "/api/auth/**").permitAll()
+		    .antMatchers("/api/getion/telefonia/**").permitAll()
+		    .antMatchers("/api/getion/clientes/**").permitAll()
+		    .antMatchers("/api/getion/usuarios/**").permitAll()
+		    .antMatchers("/api/auth/**","/v2/api-docs",  "/configuration/**", "/swagger*/**", "/webjars/**").permitAll()
 		    .anyRequest()
-		    .authenticated();
+		    .authenticated()
+		    .and()
+		    .exceptionHandling().authenticationEntryPoint(jwtAuthenticationEntryPoint).and().sessionManagement()
+		    .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+		    
+		    ;
 		http.addFilterBefore(jwtAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class);
 	}
 
-
+	@SuppressWarnings("all")
+	private HttpSecurity extraConfig(HttpSecurity httpSecurity) throws Exception {
+		return httpSecurity.csrf().disable();
+	}
+	
 	@Override
 	protected void configure(AuthenticationManagerBuilder auth) throws Exception {
 		auth.userDetailsService(userDetailsService).passwordEncoder(passwordEncoder());
