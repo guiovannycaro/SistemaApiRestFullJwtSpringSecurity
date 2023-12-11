@@ -42,16 +42,19 @@ public class UsuarioController {
 			@ApiResponse(code = 404, message = "No existen Datos Asociados a Ese Clientes", response = Usuarios.class), })
 		
 		@ApiImplicitParams({
-			@ApiImplicitParam(name = "Clientes", required = true, paramType = "query", dataType = "Object", value = "Ojeto Clientes", defaultValue = "{\r\n"
-					+ "\"id_usuario\":xxx,\r\n"
+			@ApiImplicitParam(name = "Clientes", required = true, paramType = "query", dataType = "Object", value = "Ojeto Clientes", defaultValue = 
+					"{\r\n"
+					+ "\"id\":xxx,\r\n"
 					+ "\"nombre\": \"xxx\",\r\n"
-					+ "\"email\": \"xxx\",\r\n"
-					+ "\"password\":\"xxx\",\r\n"
+					+ "\"username\": \"xxx\",\r\n"
+					+ "\"email\":\"xxx\",\r\n"
+					+ "\"password\":\"xxxx\",\r\n"
 					+ "\"fechacreacion\":\"xxxx\",\r\n"
 					+ "\"fechaactualizacion\":\"xxxx\",\r\n"
 					+ "\"ultimologeo\":\"xxxx\",\r\n"
 					+ "\"estado\": xxx\r\n"
-					+ "}"), })
+					+ "}")
+			})
 	 
 	 public String crearUsuarios(
 			 @ApiParam(name = "Clientes", value = "Recibe el objeto Usuarios", required = true)
@@ -80,16 +83,20 @@ public class UsuarioController {
 			@ApiResponse(code = 401, message = "No existen Datos Asociados a Ese Clientes", response = Usuarios.class),
 			@ApiResponse(code = 404, message = "No existen Datos Asociados a Ese Clientes", response = Usuarios.class), })
 		@ApiImplicitParams({
-			@ApiImplicitParam(name = "Clientes", required = true, paramType = "query", dataType = "Object", value = "Ojeto Clientes", defaultValue = "{\r\n"
-					+ "\"id_usuario\":xxx,\r\n"
-					+ "\"nombre\": \"xxx\",\r\n"
-					+ "\"email\": \"xxx\",\r\n"
-					+ "\"password\":\"xxx\",\r\n"
-					+ "\"fechacreacion\":\"xxxx\",\r\n"
-					+ "\"fechaactualizacion\":\"xxxx\",\r\n"
-					+ "\"ultimologeo\":\"xxxx\",\r\n"
-					+ "\"estado\": xxx\r\n"
-					+ "}"), })
+			@ApiImplicitParam(name = "Clientes", required = true, paramType = "query", dataType = "Object", value = "Ojeto Clientes", defaultValue = 
+					"{\r\n"
+							+ "\"id\":xxx,\r\n"
+							+ "\"nombre\": \"xxx\",\r\n"
+							+ "\"username\": \"xxx\",\r\n"
+							+ "\"email\":\"xxx\",\r\n"
+							+ "\"password\":\"xxxx\",\r\n"
+							+ "\"fechacreacion\":\"xxxx\",\r\n"
+							+ "\"fechaactualizacion\":\"xxxx\",\r\n"
+							+ "\"ultimologeo\":\"xxxx\",\r\n"
+							+ "\"estado\": xxx\r\n"
+							+ "}"
+					
+					) })
 	
 	    public String actualizarUsuarios (
 	    		 @ApiParam(name = "Clientes", value = "Recibe el objeto Clientes", required = true)
@@ -118,16 +125,19 @@ public class UsuarioController {
 			@ApiResponse(code = 404, message = "No existen Datos Asociados a Ese Clientes", response = Usuarios.class), })
 		
 		@ApiImplicitParams({
-			@ApiImplicitParam(name = "Clientes", required = true, paramType = "query", dataType = "Object", value = "Ojeto Clientes", defaultValue = "{\r\n"
-					+ "\"id_usuario\":xxx,\r\n"
-					+ "\"nombre\": \"xxx\",\r\n"
-					+ "\"email\": \"xxx\",\r\n"
-					+ "\"password\":\"xxx\",\r\n"
-					+ "\"fechacreacion\":\"xxxx\",\r\n"
-					+ "\"fechaactualizacion\":\"xxxx\",\r\n"
-					+ "\"ultimologeo\":\"xxxx\",\r\n"
-					+ "\"estado\": xxx\r\n"
-					+ "}"), })
+			@ApiImplicitParam(name = "Clientes", required = true, paramType = "query", dataType = "Object", value = "Ojeto Clientes", defaultValue =
+					"{\r\n"
+							+ "\"id\":xxx,\r\n"
+							+ "\"nombre\": \"xxx\",\r\n"
+							+ "\"username\": \"xxx\",\r\n"
+							+ "\"email\":\"xxx\",\r\n"
+							+ "\"password\":\"xxxx\",\r\n"
+							+ "\"fechacreacion\":\"xxxx\",\r\n"
+							+ "\"fechaactualizacion\":\"xxxx\",\r\n"
+							+ "\"ultimologeo\":\"xxxx\",\r\n"
+							+ "\"estado\": xxx\r\n"
+							+ "}")
+			})
 	    
 	    public Usuarios buscarUsuariosById(
 	    		 @ApiParam(name = "Clientes", value = "Recibe el objeto Clientes", required = true)
