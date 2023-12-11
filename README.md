@@ -10,3 +10,4 @@
 6. abri el proyecto  en eclipse y listo ejecutar lo como un proyecto normal de spring boot 
    7.abrir el navegador y colocar la siguiente url con el fin de ver la documentacion
    http://localhost:8080/swagger-ui.html
+   
