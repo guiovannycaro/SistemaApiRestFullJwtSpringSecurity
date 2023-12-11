@@ -52,7 +52,7 @@ public class UsersServicioImpl implements UsersServicio{
             Users usu = new Users();
     		usu.setId_usuario(u.getId_usuario()); 
     		usu.setNombre(u.getNombre());
-    		
+    		usu.setCodigo(u.getCodigo());
     		
     		
     	
